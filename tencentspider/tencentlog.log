@@ -1,0 +1,52 @@
+2017-12-22 00:12:54 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: tencentspider)
+2017-12-22 00:12:54 [scrapy.utils.log] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'tencentspider.spiders', 'SPIDER_MODULES': ['tencentspider.spiders'], 'LOG_FILE': 'tencentlog.log', 'LOG_LEVEL': 'INFO', 'BOT_NAME': 'tencentspider'}
+2017-12-22 00:12:54 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2017-12-22 00:12:54 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-12-22 00:12:54 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-12-22 00:12:54 [scrapy.middleware] INFO: Enabled item pipelines:
+['tencentspider.pipelines.TencentspiderPipeline']
+2017-12-22 00:12:54 [scrapy.core.engine] INFO: Spider opened
+2017-12-22 00:12:54 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-12-22 00:13:16 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-12-22 00:13:16 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 107388,
+ 'downloader/request_count': 270,
+ 'downloader/request_method_count/GET': 270,
+ 'downloader/response_bytes': 1055457,
+ 'downloader/response_count': 270,
+ 'downloader/response_status_count/200': 270,
+ 'dupefilter/filtered': 1887,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 12, 21, 16, 13, 16, 120215),
+ 'item_scraped_count': 2682,
+ 'log_count/INFO': 7,
+ 'memusage/max': 51634176,
+ 'memusage/startup': 51634176,
+ 'request_depth_max': 40,
+ 'response_received_count': 270,
+ 'scheduler/dequeued': 270,
+ 'scheduler/dequeued/memory': 270,
+ 'scheduler/enqueued': 270,
+ 'scheduler/enqueued/memory': 270,
+ 'start_time': datetime.datetime(2017, 12, 21, 16, 12, 54, 971579)}
+2017-12-22 00:13:16 [scrapy.core.engine] INFO: Spider closed (finished)
