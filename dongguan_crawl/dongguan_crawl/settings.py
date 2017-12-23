@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for tencentspider project
+# Scrapy settings for dongguan_crawl project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,17 +9,16 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'tencentspider'
+BOT_NAME = 'dongguan_crawl'
 
-SPIDER_MODULES = ['tencentspider.spiders']
-NEWSPIDER_MODULE = 'tencentspider.spiders'
+SPIDER_MODULES = ['dongguan_crawl.spiders']
+NEWSPIDER_MODULE = 'dongguan_crawl.spiders'
 
-# 保存日志信息的文件名
-LOG_FILE = "tencentlog.log"
-# 保存日志等级，大于等于此等级的信息都会被保存
+LOG_FILE = 'dg.log'
 LOG_LEVEL = "DEBUG"
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'tencentspider (+http://www.yourdomain.com)'
+#USER_AGENT = 'dongguan_crawl (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 #ROBOTSTXT_OBEY = True
@@ -44,20 +43,20 @@ LOG_LEVEL = "DEBUG"
 # Override the default request headers:
 DEFAULT_REQUEST_HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
 #   'Accept-Language': 'en',
 }
 
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'tencentspider.middlewares.TencentspiderSpiderMiddleware': 543,
+#    'dongguan_crawl.middlewares.DongguanCrawlSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'tencentspider.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'dongguan_crawl.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -69,7 +68,7 @@ DEFAULT_REQUEST_HEADERS = {
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'tencentspider.pipelines.TencentspiderPipeline': 300,
+    'dongguan_crawl.pipelines.DongguanCrawlPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
