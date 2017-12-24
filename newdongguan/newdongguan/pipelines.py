@@ -11,7 +11,7 @@ import json
 class NewdongguanPipeline(object):
     def __init__(self):
         # 创建一个文件
-        self.filename = codecs.open("dongduan.json", "w", encoding='utf-8')
+        self.filename = codecs.open("dongguan.json", "w", encoding='utf-8')
 
     def process_item(self, item, spider):
         # 中文默认使用ascii码存储，禁用后默认为unicode字符串
