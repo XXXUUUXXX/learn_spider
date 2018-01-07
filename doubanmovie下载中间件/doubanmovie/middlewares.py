@@ -8,7 +8,8 @@
 import random
 import base64
 from settings import USER_AGENTS
-from settings import PROXIES
+#from settings import PROXIES
+import requests
 
 from scrapy import signals
 
