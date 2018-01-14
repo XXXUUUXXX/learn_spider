@@ -4,27 +4,17 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
-'''
-import json
-
-class TencentredisPipeline(object):
-    def __init__(self):
-        self.filename = open("tencent.json", "w")
 
 
-    def process_item(self, item, spider):
-        content = json.dumps(dict(item), ensure_ascii = False) + "\n"
-        self.filename.write(content.encode("utf-8"))
-        return item
-
-    def close_spider(self,spider):
-        self.filename.close()
-'''
 import pymongo
 from scrapy.conf import settings
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
-class TencentredisPipeline(object):
+
+class TaobaoPipeline(object):
     def __init__(self):
         host = settings["MONGODB_HOST"]
         port = settings["MONGODB_PORT"]
@@ -39,7 +29,6 @@ class TencentredisPipeline(object):
         self.post = mydb[sheetname]
 
     def process_item(self, item, spider):
-        data = dict(item)
-        self.post.insert(data)
-
-        return item
+            data = dict(item)
+            self.post.insert(data)
+            return item
