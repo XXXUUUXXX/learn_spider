@@ -16,17 +16,17 @@ def load_page(url):
     # 解析HTML文档为HTML DOM模型
     content = etree.HTML(html)
     # 返回所有匹配成功的列表集合
-    link_list = content.xpath('//div[@class="t_con cleafix"]/div/div/div/a/@href')
+    link_list = content.xpath('//div[@class="t_con cleafix"]//div/div/a/@href')
     for link in link_list:
         # 组合链接
         fulllink = "http://tieba.baidu.com" + link
         load_Image(fulllink)
-        #print link
+        #print fulllink
 
 # 取出每个帖子里面的每个图片链接
 def load_Image(link):
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36"}
-    request = urllib2.Request(link,headers = headers)
+    request = urllib2.Request(link, headers = headers)
     response = urllib2.urlopen(request)
     html = response.read()
     # 解析
@@ -36,6 +36,7 @@ def load_Image(link):
     # 获取图片的链接
     for link in link_list:
         write_Image(link)
+        #print link
 
 def write_Image(link):
     """
@@ -63,7 +64,6 @@ def tieba_spider(url, begin_page, end_page):
     """
     for page in range(begin_page, end_page + 1):
         pn = (page - 1) * 50
-        #filename = "第" + str(page) + "页.html"
         fullurl = url + "&pn=" + str(pn)
         load_page(fullurl)
 

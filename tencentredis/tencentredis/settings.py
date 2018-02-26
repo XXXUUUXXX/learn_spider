@@ -14,7 +14,7 @@ BOT_NAME = 'tencentredis'
 SPIDER_MODULES = ['tencentredis.spiders']
 NEWSPIDER_MODULE = 'tencentredis.spiders'
 
-# 使用了scrapy-redis里的去重组件，不适用scrapy默认的去重
+# 使用了scrapy-redis里的去重组件，不使用scrapy默认的去重
 DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 # 使用了scrapy-redis里的调度器组件，不使用scrapy默认的调度器
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"

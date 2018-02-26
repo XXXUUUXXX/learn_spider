@@ -68,12 +68,14 @@ USER_AGENTS = [
     'MQQBrowser/26 Mozilla/5.0 (Linux; U; Android 2.3.7; zh-cn; MB200 Build/GRJ22; CyanogenMod-7) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1',
     'Mozilla/5.0 (Linux; U; Android 2.2.1; zh-cn; HTC_Wildfire_A3333 Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1',
 ]
+'''
 PROXIES = [
     #{"ip_prot": "219.138.58.109:3128", "user_passwd": "用户名:密码"}
     {"ip_port": "117.158.160.246:9797", "user_passwd": ""},
     {"ip_port": '202.109.207.125:8888', "user_passwd": ""},
     {"ip_port": '223.223.187.195:80', "user_passwd": ""},
 ]
+'''
 #LOG_FILE = "douban.log"
 #LOG_LEVEL = 'DEBUG'
 # Enable or disable extensions

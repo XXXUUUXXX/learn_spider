@@ -4,18 +4,17 @@ from bs4 import BeautifulSoup
 import requests
 import time
 
-from pytesseract import *
+from pytesseract import image_to_string
 from PIL import Image
 
 def captcha(captcha_data):
     with open("captcha.jpg", "wb") as f:
         f.write(captcha_data)
         time.sleep(1)
-    #text = raw_input("请输入验证码：")
-    # 返回用户输入的验证码
-    #return text
+
     image = Image.open("captcha.jpg")
     text = image_to_string(image)
+
     print("机器识别后的验证码为：" + text.encode("utf-8"))
     command = raw_input("输入Y表示验证正确，同意使用(输入其他键自行输入):")
     if (command == "Y" or command == "y"):

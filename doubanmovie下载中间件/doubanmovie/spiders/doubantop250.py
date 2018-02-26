@@ -21,7 +21,7 @@ class Doubantop250Spider(scrapy.Spider):
             # 评分
             item['star'] = each.xpath('.//span[@class="rating_num"]/text()').extract()[0]
             # 简介
-            item['quote'] = each.xpath('.//div[@class="bd"]//span[@class="inq"]/text()').extract()[0]
+            item['quote'] = each.xpath('.//div[@class="bd"]//span[@class="inq"]/text()').extract()
 
             yield item
 
